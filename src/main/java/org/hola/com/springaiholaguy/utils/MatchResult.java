@@ -1,5 +1,8 @@
 package org.hola.com.springaiholaguy.utils;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class MatchResult {
     private final String match;
     private final double confidence;

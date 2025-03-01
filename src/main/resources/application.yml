@@ -13,5 +13,10 @@ spring:
           enabled: true
           model: amazon.titan-embed-text-v2:0
           input-type: text
+      converse:
+        chat:
+          enabled: true
+          options:
+            model: anthropic.claude-v2:1
 server:
   port: 20002

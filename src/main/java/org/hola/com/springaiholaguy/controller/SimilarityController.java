@@ -22,4 +22,9 @@ public class SimilarityController {
         return ResponseEntity.status(HttpStatus.OK).body(similarityService.findBestMatch(query, options));
     }
 
+    @PostMapping("/match/model")
+    public ResponseEntity<MatchResult> getBestMatchFromModel(@RequestParam String query, @RequestBody List<String> options) {
+        return ResponseEntity.status(HttpStatus.OK).body(similarityService.findBestMatchFromModel(query, options));
+    }
+
 }
