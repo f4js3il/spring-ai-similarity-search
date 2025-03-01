@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: spring-ai-hola-guy
+  ai:
+    bedrock:
+      aws:
+        region: us-east-1
+        access-key: ${AWS_ACCESS_KEY}
+        secret-key: ${AWS_ACCESS_PASSWORD}
+        timeout: 3m
+      titan:
+        embedding:
+          enabled: true
+          model: amazon.titan-embed-text-v2:0
+          input-type: text
+server:
+  port: 20002
